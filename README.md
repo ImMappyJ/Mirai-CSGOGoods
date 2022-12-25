@@ -4,13 +4,18 @@
 ------------
 
 # BUFF商品查询
- /buff search `<keyword>` `(<page>)`
+ /buff search *`<keyword>` `(<page>)`*
 ###### keyword-商品关键字，若存在空格则加上""，如/buff search "M4A1 消音型 | 印花集"
 ###### page-页数(没有则默认第一页)
  **回复该页数内所有饰品价格详情**
 
+# 关于配置
+csgoods.json:
+`{
+  "buff_cookie": "your buff cookie"
+}`
 
-
+###### 浏览器登录buff后在主页响应界面打开浏览器开发者模式，在网络内选择csgo，在标头内找到Cookie即为你的cookie，粘贴到配置文件中重新加载配置即可。
 ------------
 
 > The MIT License (MIT)
