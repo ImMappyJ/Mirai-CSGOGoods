@@ -5,7 +5,7 @@
 
 # BUFF商品查询
  /buff search `<keyword>` `(<page>)`
-###### keyword-商品关键字
+###### keyword-商品关键字，若存在空格则加上""，如/buff search "M4A1 消音型 | 印花集"
 ###### page-页数(没有则默认第一页)
  **回复该页数内所有饰品价格详情**
 
