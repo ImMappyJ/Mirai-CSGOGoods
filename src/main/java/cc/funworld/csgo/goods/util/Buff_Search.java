@@ -28,10 +28,8 @@ public class Buff_Search {
     public DataJson getData() throws IOException {
         HashMap<String,String> header = new HashMap<>();
         header.put("cookie", PluginConfig.getBuff_cookie());
-        CSGOGoods.INSTANCE.getLogger().info(url+"&page_num="+this.page+"&search="+keyword.replaceAll(" ","+"));
         HttpGet httpGet = new HttpGet(url+"&page_num="+this.page+"&search="+keyword.replaceAll(" ","+"),header);
         Gson gson = new Gson();
-        CSGOGoods.INSTANCE.getLogger().info(httpGet.getText());
         this.data = gson.fromJson(httpGet.getText(), DataJson.class);
         return this.data;
     }

@@ -22,10 +22,11 @@ public final class CSGOGoods extends JavaPlugin {
     public void onEnable() {
         try {
             PluginConfig.load();
-            INSTANCE.getLogger().info("配置加载成功");
+            getLogger().info("配置加载成功");
         } catch (IOException e) {
-            INSTANCE.getLogger().warning("配置加载失败");
+            getLogger().warning("配置加载失败");
         }
+        CommandManager.INSTANCE.registerCommand(CommandExecutor.executor,true);
         CommandManager.INSTANCE.registerCommand(BuffCommandExecutor.executor,true);
         getLogger().info("Plugin loaded!");
     }

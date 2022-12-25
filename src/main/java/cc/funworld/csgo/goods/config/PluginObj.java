@@ -1,5 +1,7 @@
 package cc.funworld.csgo.goods.config;
 
+import java.util.ArrayList;
+
 public class PluginObj {
     public String getBuff_cookie() {
         return buff_cookie;
@@ -10,4 +12,16 @@ public class PluginObj {
     }
 
     private String buff_cookie = "none";
+
+    public ArrayList<Integer> getAdmin_qq() {
+        return admin_qq;
+    }
+
+    public void setAdmin_qq(ArrayList<Integer> admin_qq) {
+        this.admin_qq = admin_qq;
+    }
+
+    private ArrayList<Integer> admin_qq = new ArrayList<Integer>(){
+        {add(10001);}
+    };
 }
